@@ -1,0 +1,15 @@
+SQLAlchemy
+pytest
+pytest-asyncio
+pytest-tornasync
+pytest-trio
+pytest-twisted
+pandas
+openmeteo-requests
+openmeteo-sdk
+requests_cache
+retry_requests
+pydantic
+pytz
+python-dotenv
+psycopg2
