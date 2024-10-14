@@ -16,6 +16,12 @@ services:
   weather_r_w:
     build: 
       context: /WeatherRW/
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
     ports:
       - "9999:8000"
     depends_on:
@@ -24,6 +30,12 @@ services:
   weather_data_service:
     build: 
       context: /WeatherDataService/
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
     ports:
       - "9998:8080"
     depends_on:
