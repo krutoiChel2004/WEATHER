@@ -13,4 +13,4 @@ retry_requests
 pydantic
 pytz
 python-dotenv
-psycopg2
+psycopg2-binary

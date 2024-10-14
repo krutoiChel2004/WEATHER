@@ -1,3 +1,4 @@
+fastapi[standard]
 SQLAlchemy
 pytest
 pytest-asyncio
@@ -12,4 +13,4 @@ retry_requests
 pydantic
 pytz
 python-dotenv
-psycopg2
+psycopg2-binary

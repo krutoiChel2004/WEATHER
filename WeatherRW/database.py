@@ -11,6 +11,8 @@ from config import (DB_HOST,
 
 URL_DATABASE = f'postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
 
+print(URL_DATABASE)
+
 engine = create_engine(URL_DATABASE)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
