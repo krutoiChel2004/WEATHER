@@ -27,6 +27,9 @@ git clone https://github.com/krutoiChel2004/WEATHER.git
     
     http://localhost:3000/
 
+    ![Описание GIF](20241015-1330-03.8982236.gif)
+
+
 2. **check the operation status of the container**
     ```bash
     docker-compose ps
@@ -42,4 +45,5 @@ git clone https://github.com/krutoiChel2004/WEATHER.git
 из за того что open-meteo обновляет данные раз в 15 минут данные в xlsx файле повторяются
 
 ![alt text](arhitect.png)
+
 
