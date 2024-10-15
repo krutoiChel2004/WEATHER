@@ -1,7 +1,7 @@
 # start app
 ### clone rep
 ```bash
-    git clone https://github.com/krutoiChel2004/WEATHER.git
+git clone https://github.com/krutoiChel2004/WEATHER.git
 ```
 
 ### create .env file
@@ -23,6 +23,9 @@
     ```bash
     docker-compose up -d
     ```
+    после запуска сервис будет доступен по это ссылке
+    
+    http://localhost:3000/
 
 2. **check the operation status of the container**
     ```bash
