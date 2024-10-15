@@ -44,6 +44,7 @@ if __name__ == "__main__":
                     wind_direction_10m=weather["wind_direction_10m"],
                     wind_direction_description=wind_direction_calculation(weather["wind_direction_10m"]),
                     time_moscow=weather["date_time"])
+        
 
         db.add(w)
         db.commit()

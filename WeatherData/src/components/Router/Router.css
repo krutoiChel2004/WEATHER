@@ -1,0 +1,24 @@
+.protected-page {
+    position: relative;
+  }
+  
+  .content {
+    height: 100%; /* Устанавливаем высоту строки на 100% */
+  }
+  
+  .menu {
+    position: relative;
+  }
+  
+  .register-button {
+    position: absolute;
+    bottom: 0; /* Размещаем кнопку снизу */
+    left: 0; /* Размещаем кнопку слева */
+    margin: 16px; /* Добавляем отступ для красоты */
+  }
+
+  .main-block{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+  }

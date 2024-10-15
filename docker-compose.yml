@@ -4,14 +4,14 @@ services:
     image: postgres:15
     container_name: db_app
     ports:
-      - "1221:5432"  # Проброс порта, чтобы клиент мог подключиться
+      - "1221:5432"
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASS}
       POSTGRES_DB: ${DB_NAME}
     volumes:
-      - postgres_data:/var/lib/postgresql/data  # Персистентное хранилище для данных
-    restart: always  # Автоперезапуск контейнера в случае сбоя
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
 
   weather_r_w:
     build: 
@@ -42,5 +42,19 @@ services:
       - db
       - weather_r_w
 
+  web:
+    build:
+      context: /WeatherData/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Прокидываем порт 3000 на хосте к порту 80 в контейнере
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - db
+      - weather_r_w
+      - weather_data_service
+
 volumes:
-  postgres_data:  # Определение volume для хранения данных
+  postgres_data:
